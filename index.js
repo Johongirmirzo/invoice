@@ -34,7 +34,9 @@ app.use((req, res, next) => {
 
 // connecting to mongodb
 mongoose
-  .connect("mongodb://localhost/invoice")
+  .connect(
+    "mongodb+srv://m001-student:<password>@sandbox.0syyi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  )
   .then(() => console.log("Database connected successfully"))
   .catch((err) => console.log(err.message));
 
