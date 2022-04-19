@@ -80,7 +80,7 @@ function ResetPassword({ user }) {
     onSubmit: (values) => {
       console.log(values);
       axios
-        .post("https://invoice-appp.herokuapp.com/resetPassword", {
+        .post("https://invoicce-appp.herokuapp.com/resetPassword", {
           ...values,
         })
         .then((response) => {

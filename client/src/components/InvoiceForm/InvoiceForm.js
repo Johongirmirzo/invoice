@@ -70,7 +70,7 @@ function InvoiceForm({ storeInvoice }) {
           console.log(token);
           axios
             .post(
-              "https://invoice-appp.herokuapp.com/api/invoice",
+              "https://invoicce-appp.herokuapp.com/api/invoice",
               {
                 ...values,
                 total,

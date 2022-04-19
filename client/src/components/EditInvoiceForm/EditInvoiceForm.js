@@ -59,7 +59,7 @@ function InvoiceForm({ editInvoice, invoice }) {
             editInvoice(values.invoiceId, values);
             axios
               .put(
-                `https://invoice-appp.herokuapp.com/api/invoice/${invoice._id}`,
+                `https://invoicce-appp.herokuapp.com/api/invoice/${invoice._id}`,
                 {
                   ...values,
                   total,

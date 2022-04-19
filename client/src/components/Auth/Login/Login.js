@@ -80,7 +80,7 @@ function Login({ user, getLoggedInUser }) {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       axios
-        .post("https://invoice-appp.herokuapp.com/login", values)
+        .post("https://invoicce-appp.herokuapp.com/login", values)
         .then((response) => {
           if (response.data.success) {
             console.log(response);

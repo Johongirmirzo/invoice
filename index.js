@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+// @Crossorigin
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");

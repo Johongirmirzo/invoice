@@ -42,7 +42,7 @@ function App() {
     const token = getToken();
     console.log(token);
     axios
-      .get("https://invoice-appp.herokuapp.com/api/invoice", {
+      .get("https://invoicce-appp.herokuapp.com/api/invoice", {
         headers: {
           token: `Bearer ${token}`,
         },
@@ -59,7 +59,7 @@ function App() {
   };
   const deleteInvoice = (invoiceId) => {
     axios
-      .delete(`https://invoice-appp.herokuapp.com/api/invoice/${invoiceId}`)
+      .delete(`https://invoicce-appp.herokuapp.com/api/invoice/${invoiceId}`)
       .then((res) => {
         getInvoices();
       })
@@ -89,7 +89,7 @@ function App() {
     console.log(val);
     val &&
       axios
-        .put(`https://invoice-appp.herokuapp.com/api/invoice/${invoiceId}`, {
+        .put(`https://invoicce-appp.herokuapp.com/api/invoice/${invoiceId}`, {
           ...val,
           _id: invoiceId,
         })
@@ -110,7 +110,7 @@ function App() {
     console.log(val, invoiceId);
     val &&
       axios
-        .put(`https://invoice-appp.herokuapp.com/api/invoice/${invoiceId}`, {
+        .put(`https://invoicce-appp.herokuapp.com/api/invoice/${invoiceId}`, {
           ...val,
           _id: invoiceId,
         })
@@ -133,7 +133,7 @@ function App() {
     setInvoices(updatedInvoices);
     val &&
       axios
-        .put(`https://invoice-appp.herokuapp.com/api/invoice/${invoiceId}`, {
+        .put(`https://invoicce-appp.herokuapp.com/api/invoice/${invoiceId}`, {
           ...val,
           _id: invoiceId,
         })
@@ -169,7 +169,7 @@ function App() {
     setInvoices(updatedInvoices);
     val &&
       axios
-        .put(`https://invoice-appp.herokuapp.com/api/invoice/${invoiceId}`, {
+        .put(`https://invoicce-appp.herokuapp.com/api/invoice/${invoiceId}`, {
           ...val,
           _id: invoiceId,
         })

@@ -47,7 +47,9 @@ function PreviewInvoice({
   useEffect(() => {
     console.log(params.invoiceID);
     axios
-      .get(`https://invoice-appp.herokuapp.com/api/invoice/${params.invoiceID}`)
+      .get(
+        `https://invoicce-appp.herokuapp.com/api/invoice/${params.invoiceID}`
+      )
       .then((response) => {
         setInvoice(response.data);
       })

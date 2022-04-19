@@ -92,7 +92,7 @@ function Register({ user }) {
     onSubmit: (values) => {
       if (values.agreed) {
         axios
-          .post("https://invoice-appp.herokuapp.com/register", values)
+          .post("https://invoicce-appp.herokuapp.com/register", values)
           .then((response) => {
             if (response.data.success) {
               removeToken();
