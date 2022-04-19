@@ -63,8 +63,8 @@ function DeleteModal({ invoiceId, deleteInvoice }) {
             Delete an Invoice
           </Typography>
           <Typography sx={{ mt: 2, color: "lightgray" }}>
-            You are deleting an invoice with the id of #{invoiceId}. You can NOT
-            undo this action. So rethink this twice.
+            You are deleting an invoice with the id of #{invoiceId.slice(0, 7)}.
+            You can NOT undo this action. So rethink this twice.
           </Typography>
           <Typography
             sx={{ display: "flex", alignItems: "center", marginTop: "20px" }}
