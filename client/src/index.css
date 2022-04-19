@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+ 
+a,span,button,input,img {
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+button {
+    border: 0;
+}
+
+.testColors {
+    color: #8056f3;    
+}
+::-webkit-scrollbar {
+    width:20px;
+    background: hsl(235,30%,15%) !important;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background:hsl(235,30%,30%) !important;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+}
+ 
+
+/* table */
+.table__header {
+    color: #fff !important;
+}
+.table__data {
+    color: lightgray !important;
+}
+.table__header, .table__data {
+    border: 1px solid lightgray !important;
+}

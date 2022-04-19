@@ -7,6 +7,7 @@ const passport = require("passport");
 const cors = require("cors");
 const session = require("express-session");
 const flash = require("connect-flash");
+const path = require("path");
 
 const app = express();
 
@@ -35,15 +36,18 @@ app.use((req, res, next) => {
 
 // connecting to mongodb
 mongoose
-  .connect(
-    "mongodb+srv://m001-student:Namangan19952109+-*@sandbox.0syyi.mongodb.net/invoice-app?retryWrites=true&w=majority"
-  )
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("Database connected successfully"))
   .catch((err) => console.log(err.message));
 
 // auth routes
 app.use("/", require("./routes/auth"));
 app.use("/api/invoice", require("./routes/invoice"));
+
+app.use(express.static(path.join(__dirname, "/client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/client/build", "index.html"));
+});
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`));
