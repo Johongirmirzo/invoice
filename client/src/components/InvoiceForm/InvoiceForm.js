@@ -456,7 +456,7 @@ function InvoiceForm({ storeInvoice }) {
                   <Button
                     onClick={() =>
                       push({
-                        id: Math.random(),
+                        id: uuidv4(),
                         service: "",
                         price: 0,
                         quantity: 0,
