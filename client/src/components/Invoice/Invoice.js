@@ -27,7 +27,7 @@ const PaidStatus = styled("p")({
   borderRadius: "10px",
 });
 function Invoice({ invoice, el }) {
-  // console.log("Invoice ", invoice);
+  console.log("Invoice ", invoice);
   return (
     <InvoiceBox className="invoice" ref={el}>
       <Box
